@@ -1,0 +1,13 @@
+# Games
+Steam
+Citra (3DS)
+
+# Images
+Krita
+Gimp
+
+# Files
+MegaSync
+
+# Office
+FreeOffice
