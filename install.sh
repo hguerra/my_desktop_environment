@@ -8,11 +8,11 @@ sudo apt update -y
 
 
 echo "==> Instalando SO lib..."
-sudo apt -y install make build-essential checkinstall software-properties-common dirmngr apt-transport-https lsb-release ca-certificates zip unzip git curl wget ttf-mscorefonts-installer winbind zsh
+sudo apt -y install make build-essential checkinstall software-properties-common ppa-purge dirmngr apt-transport-https lsb-release ca-certificates zip unzip git curl wget ttf-mscorefonts-installer winbind zsh terminator
 
 
 echo "==> Instalando driver video..."
-sudo apt-add-repository -y ppa:graphics-drivers/ppa && sudo apt update && sudo ubuntu-drivers autoinstall
+sudo apt-add-repository -y ppa:graphics-drivers/ppa && sudo apt update -y && sudo ubuntu-drivers autoinstall
 
 
 echo "==> Upgrade..."
@@ -38,7 +38,6 @@ pip3 install pipenv
 
 
 echo "==> Add Repositorios."
-sudo add-apt-repository ppa:nilarimogard/webupd8 -y  
 sudo apt-add-repository ppa:ansible/ansible -y
 
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -110,7 +109,6 @@ sudo apt -y install vlc bleachbit gparted hardinfo psensor thunderbird remmina k
 sudo apt -y install qbittorrent youtube-dlg
 sudo apt -y install ffmpeg # Converter video: ffmpeg -i input.mp4 -c:v libvpx-vp9 -crf 30 -b:v 0 -b:a 128k -c:a libopus output.webm
 
-
 sudo snap install code-insiders --classic
 sudo snap install intellij-idea-community --classic
 sudo snap install pycharm-community --classic
@@ -118,25 +116,25 @@ sudo snap install spotify
 
 sudo snap install google-cloud-sdk --classic
 sudo snap install robo3t-snap
-sudo snap install zaproxy --classic
-sudo snap install insomnia
 
+sudo snap install insomnia
 
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install flathub io.dbeaver.DBeaverCommunity
 sudo flatpak install flathub com.syntevo.SmartGit
-sudo flatpak install flathub com.jgraph.drawio.desktop
-sudo flatpak install flathub net.xmind.XMind8
-sudo flatpak install flathub com.github.muriloventuroso.easyssh
 
 
 # Opcionais
+# sudo snap install zaproxy --classic
 # sudo snap install okular
 # sudo snap install slack --classic
 # sudo snap install wavebox
 # sudo snap install zenkit
 # sudo snap install odrive-unofficial
 # sudo snap install skype --classic
+# sudo flatpak install flathub com.jgraph.drawio.desktop
+# sudo flatpak install flathub net.xmind.XMind8
+# sudo flatpak install flathub com.github.muriloventuroso.easyssh
 # sudo flatpak install flathub org.qgis.qgis
 # sudo flatpak install flathub org.zealdocs.Zeal
 
@@ -174,10 +172,15 @@ sudo rm -rf wps.deb
 #flatpak install flathub com.wps.Office
 
 
-echo "Verificando possiveis erros..."
+echo "==> Verificando possiveis erros..."
 # https://cleuber.com.br/index.php/2017/09/04/o-que-fazer-depois-de-instalar-o-linux-deepin-15-4-1
 # https://cleuber.com.br/index.php/2015/11/27/como-usar-o-comando-rsync-para-transferir-dados-para-diretorios-locais-e-remotos
 sudo apt update --fix-missing && sudo apt install -f && sudo dpkg --configure -a && sudo apt-get autoremove && sudo apt-get autoclean
+
+
+echo "==> Instalando temas..."
+sudo add-apt-repository ppa:system76/pop -y
+sudo apt -y update && sudo apt -y install gnome-tweaks dconf-editor pop-theme
 
 
 echo "==> Setup oh-my-zsh..."
@@ -189,5 +192,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 sudo chsh -s $(which zsh) $USER
 
 
-echo "Finalizado!"
+echo "==> Finalizado!"
 
