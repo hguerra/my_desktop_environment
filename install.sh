@@ -8,7 +8,7 @@ sudo apt update -y
 
 
 echo "==> Instalando SO lib..."
-sudo apt -y install make build-essential checkinstall software-properties-common ppa-purge dirmngr apt-transport-https lsb-release ca-certificates zip unzip git curl wget ttf-mscorefonts-installer winbind zsh terminator
+sudo apt -y install make build-essential checkinstall software-properties-common ppa-purge dirmngr apt-transport-https lsb-release ca-certificates zip unzip git curl wget winbind zsh terminator baobab vim
 
 
 echo "==> Instalando driver video..."
@@ -88,6 +88,8 @@ echo 'export NVM_DIR="$HOME/.nvm"' | sudo tee -a ~/.zshrc > /dev/null
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm' | sudo tee -a ~/.zshrc > /dev/null
 
 echo "==> Carregando variaveis de ambiente..."
+mkdir "$HOME/bin"
+echo 'export PATH="$HOME/bin:$PATH"' | sudo tee -a ~/.zshrc > /dev/null
 source ~/.zshrc
 
 
@@ -153,6 +155,11 @@ sudo dpkg -i chrome.deb
 sudo apt install -f
 sudo rm -rf chrome.deb
 
+echo "==> Instalando dropbox..."
+wget -O dropbox.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2019.02.14_amd64.deb
+sudo dpkg -i dropbox.deb
+sudo apt install -f
+sudo rm -rf dropbox.deb
 
 echo "==> Instalando MongoDBCompass..."
 wget -O mongodbcompass.deb https://downloads.mongodb.com/compass/mongodb-compass_1.19.12_amd64.deb
@@ -180,7 +187,7 @@ sudo apt update --fix-missing && sudo apt install -f && sudo dpkg --configure -a
 
 echo "==> Instalando temas..."
 sudo add-apt-repository ppa:system76/pop -y
-sudo apt -y update && sudo apt -y install gnome-tweaks dconf-editor pop-theme
+sudo apt -y update && sudo apt -y install gnome-tweaks dconf-editor pop-theme ttf-mscorefonts-installer
 
 
 echo "==> Setup oh-my-zsh..."
