@@ -21,7 +21,7 @@ sudo apt dist-upgrade -y
 
 
 echo "==> Setup python..."
-sudo apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libyaml-dev sqlite3 libxslt1-dev libcurl4-openssl-dev libpq-dev
+sudo apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libyaml-dev sqlite3 libxslt1-dev libcurl4-openssl-dev libpq-dev postgresql-client-11
 sudo apt install -y python python3
 sudo apt install -y python3-dev
 sudo apt install -y python3-pip
@@ -125,7 +125,6 @@ sudo snap install robo3t-snap
 sudo snap install insomnia
 
 sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install flathub io.dbeaver.DBeaverCommunity
 sudo flatpak install flathub com.syntevo.SmartGit
 
 
@@ -170,6 +169,11 @@ sudo dpkg -i mongodbcompass.deb
 sudo apt install -f
 sudo rm -rf mongodbcompass.deb
 
+echo "==> Instalando dbeaver..."
+wget -O dbeaver.deb https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+sudo dpkg -i dbeaver.deb
+sudo apt install -f
+sudo rm -rf dbeaver.deb
 
 echo "==> Instalando office..."
 wget -O wps.deb http://kdl.cc.ksosoft.com/wps-community/download/8865/wps-office_11.1.0.8865_amd64.deb
