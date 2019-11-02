@@ -8,7 +8,7 @@ sudo apt update -y
 
 
 echo "==> Instalando SO lib..."
-sudo apt -y install make build-essential checkinstall software-properties-common ppa-purge dirmngr apt-transport-https lsb-release ca-certificates zip unzip git curl wget winbind zsh terminator baobab vim
+sudo apt install -y  make build-essential checkinstall software-properties-common ppa-purge dirmngr apt-transport-https lsb-release ca-certificates zip unzip git curl wget winbind zsh terminator baobab vim
 
 
 echo "==> Instalando driver video..."
@@ -21,8 +21,10 @@ sudo apt dist-upgrade -y
 
 
 echo "==> Setup python..."
-sudo apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libyaml-dev sqlite3 libxslt1-dev libcurl4-openssl-dev libpq-dev postgresql-client-11
+sudo apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libyaml-dev sqlite3 libxslt1-dev libcurl4-openssl-dev libpq-dev
+sudo apt install -y postgresql-client-11
 sudo apt install -y python python3
+sudo apt install -y python-setuptools python3-setuptools
 sudo apt install -y python3-dev
 sudo apt install -y python3-pip
 sudo apt install -y python3-venv
@@ -48,12 +50,16 @@ sudo apt upgrade -y
 
 
 echo "==> Setup ansible..."
-sudo apt -y install ansible
+sudo apt install -y ansible
 
 
-echo "==> Setup vagrant..."
-sudo apt -y install virtualbox vagrant
-vagrant plugin install vagrant-disksize
+echo "==> Setup virtualbox..."
+sudo apt install -y virtualbox
+
+
+# echo "==> Setup vagrant..."
+# sudo apt install -y vagrant
+# vagrant plugin install vagrant-disksize
 
 
 echo "==> Setup docker..."
@@ -109,10 +115,10 @@ npm install -g generator-jhipster
 
 
 echo "==> Instalando programas base..."
-sudo apt -y install snapd flatpak 
-sudo apt -y install vlc bleachbit gparted hardinfo psensor thunderbird remmina kazam deja-dup mypaint mypaint-data-extras nixnote2 filezilla putty synaptic
-sudo apt -y install qbittorrent youtube-dlg
-sudo apt -y install ffmpeg # Converter video: ffmpeg -i input.mp4 -c:v libvpx-vp9 -crf 30 -b:v 0 -b:a 128k -c:a libopus output.webm
+sudo apt install -y snapd flatpak 
+sudo apt install -y vlc bleachbit gparted hardinfo psensor thunderbird remmina kazam deja-dup mypaint mypaint-data-extras nixnote2 filezilla putty synaptic
+sudo apt install -y qbittorrent youtube-dlg
+sudo apt install -y ffmpeg # Converter video: ffmpeg -i input.mp4 -c:v libvpx-vp9 -crf 30 -b:v 0 -b:a 128k -c:a libopus output.webm
 
 sudo snap install code-insiders --classic
 sudo snap install intellij-idea-community --classic
@@ -144,7 +150,7 @@ sudo flatpak install flathub com.syntevo.SmartGit
 
 
 echo "==> Instalando sublimetext..."
-sudo apt -y install sublime-text
+sudo apt install -y sublime-text
 
 
 echo "==> Instalando chromium"
@@ -194,7 +200,7 @@ sudo apt update --fix-missing && sudo apt install -f && sudo dpkg --configure -a
 
 echo "==> Instalando temas..."
 sudo add-apt-repository ppa:system76/pop -y
-sudo apt -y update && sudo apt -y install gnome-tweaks dconf-editor pop-theme ttf-mscorefonts-installer
+sudo apt update -y && sudo apt install -y gnome-tweaks dconf-editor pop-theme ttf-mscorefonts-installer fonts-firacode
 
 
 echo "==> Setup oh-my-zsh..."
