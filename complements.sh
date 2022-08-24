@@ -8,7 +8,7 @@ sudo apt update -y
 
 
 echo "==> Instalando SO lib..."
-sudo apt install -y  make build-essential checkinstall software-properties-common ppa-purge dirmngr apt-transport-https lsb-release ca-certificates zip unzip git curl wget winbind zsh terminator baobab vim
+sudo apt install -y make build-essential checkinstall software-properties-common ppa-purge dirmngr apt-transport-https lsb-release ca-certificates zip unzip git curl wget winbind zsh terminator baobab vim
 
 
 echo "==> Instalando driver video..."
