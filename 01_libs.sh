@@ -10,7 +10,7 @@ sudo apt upgrade -y
 sudo apt dist-upgrade -y
 
 echo "==> Instalando SO lib..."
-sudo apt install -y make build-essential checkinstall software-properties-common ppa-purge dirmngr apt-transport-https lsb-release ca-certificates gnupg zip unzip git curl wget winbind zsh terminator baobab vim flameshot
+sudo apt install -y make build-essential checkinstall software-properties-common ppa-purge dirmngr apt-transport-https lsb-release ca-certificates gnupg zip unzip git curl wget winbind zsh terminator baobab vim
 
 echo "==> Setup python..."
 sudo apt install -y libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libyaml-dev sqlite3 libxslt1-dev libcurl4-openssl-dev libpq-dev
