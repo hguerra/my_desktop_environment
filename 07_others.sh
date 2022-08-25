@@ -3,7 +3,7 @@
 echo "==> Script para configuracao do ambiente Linux."
 
 echo "==> Setup others..."
-sudo apt install -y vlc bleachbit gparted hardinfo psensor kazam mypaint mypaint-data-extras synaptic ffmpeg flameshot
+sudo apt install -y vlc bleachbit gparted hardinfo psensor kazam mypaint mypaint-data-extras synaptic ffmpeg flameshot dos2unix gnome-shell-extensions chrome-gnome-shell gir1.2-gtop-2.0 lm-sensors
 
 sudo snap install insomnia
 sudo snap install spotify

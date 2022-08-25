@@ -10,6 +10,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # vim .zshrc
 # plugins=(git zsh-syntax-highlighting zsh-autosuggestions asdf)
 
+echo  'export PATH="$HOME/.poetry/bin:$PATH"' >> ~/.zshrc
+
 source ~/.zshrc
 
 echo "==> Finalizado!"

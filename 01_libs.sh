@@ -22,6 +22,7 @@ sudo apt install -y python3-pip
 sudo apt install -y python3-venv
 sudo pip3 install pipenv
 pip3 install pipenv
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
 
 echo "==> Setup chrome..."
 curl -Lo chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
